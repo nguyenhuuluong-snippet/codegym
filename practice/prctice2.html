@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function kiemTraChiaHet(){
+        let a = parseInt(prompt("Nhập số a"));
+        let b = parseInt(prompt("Nhập số b"));
+
+        if (isNaN(a) || isNaN(b)) {
+            alert('Vui lòng nhập số hợp lệ!');
+            return;
+        }
+        if (b === 0) {
+            alert('Không thể chia hết cho 0!');
+        }
+        else if (a % b === 0) {
+            alert(`${a} chia hết cho ${b}`);
+        }
+        else{
+            alert(`${a} không chia hết cho ${b}`);
+        };
+    }
+</script>
+<button onclick="kiemTraChiaHet()">Kiểm tra</button>
+</body>
+</html>
