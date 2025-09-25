@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // let year = parseInt(prompt('nhập năm dương lịch'));
+    // let dayLaNamNhuan = false;
+    //
+    // let isDivisible4 = year % 4 === 0;
+    // if (isDivisible4) {
+    //     let isDivisible100 = year % 100 === 0;
+    //     if (isDivisible100) {
+    //         let isDivisible400 = year % 400 === 0;
+    //         if (isDivisible400) {
+    //             dayLaNamNhuan = true;
+    //         }
+    //     } else {
+    //         dayLaNamNhuan = true;
+    //     }
+    // }
+    // if (dayLaNamNhuan) {
+    //     alert(year + 'đây là năm nhuận');
+    // }else {
+    //     alert(year + 'đây không phải là năm nhuận');
+    // }
+
+// let year = parseInt(prompt('nhập năm dương lịch'));
+// if (year % 4 === 0) {
+//     if (year % 100 === 0) {
+//         if (year % 400 === 0) {
+//             alert(year + 'đây là năm nhuận');
+//         } else {
+//             alert(year + 'đây không phải là năm nhuận');
+//         }
+//     } else {
+//         alert(year + 'đây là năm nhuận');
+//     }
+// } else {
+//     alert(year + 'đây không phải là năm nhuận');
+// }
+    let year = parseInt(prompt('nhập năm dương lịch'));
+    let isLeapYear = false;
+    if(year % 4 === 0){
+        if(year % 100 === 0){
+            if(year % 400 === 0){
+                isLeapYear = true;
+            }
+        } else {
+            isLeapYear = true;
+        }
+    }
+    if(isLeapYear){
+        alert(year + 'đây là năm nhuận');
+    }else {
+        alert(year + 'đây không phải năm nhuận');
+    }
+</script>
+</body>
+</html>
