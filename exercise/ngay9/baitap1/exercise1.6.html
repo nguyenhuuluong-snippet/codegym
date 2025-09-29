@@ -6,10 +6,28 @@
 </head>
 <body>
 <script>
-    let doanhSo = parseInt(prompt('Nhập doanh số thu được: '));
-    let tiLeHoaHong = 0.05;
-    let hoaHong = doanhSo * tiLeHoaHong;
-    document.write('hoa hồng nhận được: ' + hoaHong + 'đ');
+    let doanhSo = parseInt(prompt('Nhập doanh số: '))
+    function tinhHoaHong(doanhSo) {
+        if (typeof doanhSo !== 'number' || isNaN(doanhSo)) {
+           alert('giá trị nhập phải là một số!');
+        }
+        if (doanhSo < 0) {
+            alert('giá trị nhập không phải là số âm');
+        }
+
+        let hoaHong = 0;
+        if (doanhSo < 5000000) {
+            hoaHong = doanhSo * 0.03;
+        } else if (doanhSo < 10000000) {
+            hoaHong = doanhSo * 0.05;
+        } else if (doanhSo < 20000000) {
+            hoaHong = doanhSo * 0.10;
+        } else {
+            hoaHong = doanhSo * 0.15;
+        }
+        return hoaHong;
+    }
+    document.write('Hoa hồng nhận được: ',tinhHoaHong(doanhSo).toLocaleString('vi-VN'), ' VND');
 </script>
 </body>
 </html>
