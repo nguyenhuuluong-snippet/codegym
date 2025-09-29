@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>so sánh 3 số</title>
+</head>
+<body>
+<script>
+    let num1 = parseInt(prompt('Enter number1'));
+    let num2 = parseInt(prompt('Enter number2'));
+    let num3 = parseInt(prompt('Enter number3'));
+    if (isNaN(num1 || num2 || num3)) {
+        alert('Vui lòng nhập đúng!');
+    } else if (num1 == num2 == num3) {
+        document.write('3 số bằng nhau!');
+    }else if (num1 > num2 && num1 > num3) {
+       document.write(num1 + ' là số lớn nhất!');
+    } else if (num2 > num1 && num2 > num3) {
+        document.write(num2 + ' là số lớn nhất!');
+    }else if (num3 > num1 && num3 > num2) {
+        document.write(num3 + ' là số lớn nhất');
+    } else {
+        document.write('có ít nhất 2 số bằng nhau và lớn nhất');
+    }
+</script>
+</body>
+</html>

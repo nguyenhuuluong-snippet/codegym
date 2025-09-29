@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Điểm xếp hạng</title>
+</head>
+<body>
+<script>
+    let dkt = parseFloat(prompt('Nhập điểm kiểm tra: '));
+    let dgk = parseFloat(prompt('Nhập điểm thi giữa kỳ: '));
+    let tck = parseFloat(prompt('Nhập điểm thi cuối kỳ: '))
+    let dtb = (dkt + dgk + tck) / 3;
+    if (isNaN(dkt || dgk || tck )) {
+        alert('Vui lòng nhập đúng!');
+    }else if (dkt && dgk && tck < 0) {
+        alert('số bạn nhập không đúng');
+    }
+    else if (dtb >= 7 && dtb <= 10) {
+        alert('Điểm của bạn xếp loại Giỏi');
+    } else if (dtb >= 5 && dtb <= 7) {
+        alert('Điểm của bạn xếp loại Khá');
+    } else {
+        alert('Điểm của bạn xếp loại yếu');
+    }
+</script>
+</body>
+</html>
