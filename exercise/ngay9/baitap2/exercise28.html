@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra tuổi</title>
+</head>
+<body>
+<input type="numer" id="tuoi" placeholder="Nhập tuổi">
+<button onclick="kiemTraTuoi()">Kiểm tra</button>
+<script>
+    function kiemTraTuoi() {
+        let tuoi = +document.getElementById('tuoi').value;
+        if (isNaN(tuoi)) {
+            alert('Tuổi phải là số nguyên!');
+            return;
+        }
+        if (tuoi > 0 && tuoi < 120) {
+            alert(`${tuoi} là tuổi của 1 người.`);
+        } else {
+            alert(`${tuoi} không phải là tuổi của 1 người.`);
+        }
+    }
+</script>
+</body>
+</html>

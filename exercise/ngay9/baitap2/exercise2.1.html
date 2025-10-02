@@ -5,9 +5,22 @@
     <title>chuyển nhiệt độ</title>
 </head>
 <body>
+<input type="number" id="doC" placeholder="Nhập nhiệt độ C">
+<button onclick="chuyenDoi()">Chuyển Đổi</button>
+
 <script>
-    let doC = parseInt(prompt('Nhập nhiệt độ C: '));
-    let doF = doC * 9/5 + 32;
+
+    function chuyenDoi () {
+        let doC = +document.getElementById("doC").value;
+
+        if (isNaN(doC)) {
+            alert('Vui lòng nhập đúng!');
+            return;
+        }
+        let doF = (doC * 9/5) + 32;
+        document.write(`${doC}\u00B0C = ${doF.toFixed(2)}\u00B0F`);
+    }
+
 
 </script>
 </body>

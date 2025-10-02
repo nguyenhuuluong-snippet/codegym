@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển độC sang độF</title>
+</head>
+<body>
+<script>
+
+    let met = parseInt(prompt('Nhập số: '))
+    let fit = met * 3.2808;
+        if (isNaN(met)) {
+            alert('Nhập không đúng!');
+        } if (met <= 0) {
+            alert('giá trị không đúng');
+    }
+
+    document.write(`${met}m = ${fit.toFixed(4)}f`);
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Diện tích hình chữ nhật</title>
+</head>
+<body>
+<input type="number" id="len" placeholder="Nhập chiều dài(cm): ">
+<input type="number" id="wid" placeholder="Nhập chiều rộng(cm): ">
+<button onclick="tinhDienTich()" >Tính diện tích</button>
+<script>
+
+    function tinhDienTich() {
+    let len = +document.getElementById('len').value;
+    let wid = +document.getElementById('wid').value;
+        if (isNaN(len) || isNaN(wid)) {
+            alert('Dữ liệu không đúng!');
+            return;
+        }
+        if (len <= 0 || wid <= 0) {
+            alert('Dữ liệu không đúng!');
+            return;
+        }
+    let acr = len * wid;
+    alert(`Diện tích là: ${acr.toFixed(0)} cm\u00B2`);
+    }
+</script>
+</body>
+</html>

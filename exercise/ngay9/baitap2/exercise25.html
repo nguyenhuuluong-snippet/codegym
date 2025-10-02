@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Diện tích hình tam giác vuông</title>
+</head>
+<body>
+<input type="number" id="num1" placeholder="Nhập cạnh t1 của tam giác(cm): ">
+<input type="number" id="num2" placeholder="Nhập cạnh t2 của tam giác(cm): ">
+<button onclick="tinhDienTich()">Tính diện tích</button>
+<script>
+    function tinhDienTich() {
+        let num1 = +document.getElementById("num1").value;
+        let num2 = +document.getElementById("num2").value;
+        if (isNaN(num1) && isNaN(num2)) {
+            alert('Số liệu không đúng!')
+            return;
+        }
+        if (num1 <=0 && num2 <= 0) {
+            alert('Số liệu không đúng!');
+            return;
+        }
+        let area = (num1 * num2) / 2;
+        alert(`Diện tích của tam giác vuông là: ${area} cm\u00B2`)
+    }
+</script>
+</body>
+</html>

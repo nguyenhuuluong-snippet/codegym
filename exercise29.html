@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3 cạnh của tam giác</title>
+</head>
+<body>
+<script>
+    let a = parseFloat(prompt('Nhập cạnh a'));
+    let b = parseFloat(prompt('Nhập cạnh b'));
+    let c = parseFloat(prompt('Nhập cạnh c'));
+    if (isNaN(a) && isNaN(b) && isNaN(c)) {
+        alert('Nhập không đúng!');
+    }
+    if (a > 0 && b > 0 && c > 0) {
+        if (a + b > c && b + c > a && a + c > b) {
+            alert('3 số này là cạnh của 1 tam giác.');
+        } else {
+            alert('3 số này không phải là một cạnh của tam giác');
+        }
+    } else {
+        alert('Các cạnh phải lớn hơn 0');
+    }
+</script>
+</body>
+</html>

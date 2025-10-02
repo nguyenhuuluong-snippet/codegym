@@ -2,14 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Tính cước điện thoại</title>
 </head>
 <body>
 <script>
-    let thongSo = parseInt(prompt('Nhập thông số: '));
-    let cuocPhi = parseInt(prompt('Nhập cước phí: '));
-    let cuocDienThoai = thongSo * cuocPhi;
-    document.write('Tiền cước của bạn là: ' + cuocDienThoai + 'đ' );
+    let soPhut = parseInt(prompt('Nhập số phút gọi trong tháng: '));
+    function tinhCuocDienThoai(soPhut) {
+        if (typeof soPhut !== 'number' || isNaN(soPhut)) {
+            alert('vui lòng nhập đúng!');
+        }
+        if (soPhut < 0) {
+            alert('Số không đúng!')
+        }
+        let cuocPhiThueBao = 25000;
+        let cuocGoi = 0;
+        if (soPhut <= 50) {
+            cuocGoi = soPhut * 600;
+        } else if (soPhut <=200) {
+            cuocGoi = (soPhut * 600) + (soPhut - 50) * 400;
+        } else {
+            cuocGoi = (50 * 600) + (150 * 400) + (soPhut - 200) * 200;
+        }
+        let tongTien = cuocPhiThueBao + cuocGoi;
+        return tongTien;
+    }
+    document.write('Tổng cước điện thoại: ', tinhCuocDienThoai(soPhut).toLocaleString("vi-VN"));
 </script>
 </body>
 </html>

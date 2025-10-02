@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let nhietDo;
+    while (true) {
+        nhietDo = parseFloat(prompt('Nhap nhiet do:'));
+        if (isNaN(nhietDo)) {
+            alert('Nhập đúng');
+            continue;
+        }
+        if (nhietDo > 100) {
+            alert('nhiệt độ trên 100!')
+        } else if (nhietDo < 20) {
+            alert('nhiệt độ dưới 20!');
+        }else {
+            alert('Nhiệt độ là: ' + nhietDo );
+            break;
+        }
+    }
+
+</script>
+</body>
+</html>

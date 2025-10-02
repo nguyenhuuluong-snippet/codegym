@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Giải phương trình bậc1</title>
+</head>
+<body>
+<input type="number" id="a" placeholder="Nhập số a">
+<input type="number" id="b" placeholder="Nhập số b">
+<button onclick="giaiPhuongTrinh()">Giải phương trình</button>
+<script>
+    function giaiPhuongTrinh() {
+        let a = document.getElementById("a").value;
+        let b = document.getElementById("b").value;
+        if (isNaN(a) || isNaN(b)) {
+            alert('Nhập số không đúng!');
+            return;
+        }
+        if (a === 0) {
+            if (b === 0) {
+                alert('Phương trình có vô số nghiệm!');
+            } else {
+                alert('Phương trình vô nghiệm!');
+            }
+
+        } else {
+            let x = -b / a;
+            alert(`Nghiệm của phương trình là: x = ${x.toFixed(2)}`);
+        }
+    }
+</script>
+</body>
+</html>

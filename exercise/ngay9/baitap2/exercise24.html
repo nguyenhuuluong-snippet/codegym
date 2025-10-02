@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính diện tích hình vuông</title>
+</head>
+<body>
+<input type="number" id="num1" placeholder="Nhập cạnh của hình vuông(cm): ">
+<button onclick="tinhDienTich()">Tính diện tích</button>
+<script>
+    function tinhDienTich() {
+        let num1 = +document.getElementById("num1").value;
+        if (isNaN(num1)) {
+            alert('Nhập số không hợp lệ!');
+            return;
+        }
+        if (num1 <= 0) {
+            alert('Nhập số không đúng');
+            return;
+        }
+        let area = Math.pow(num1, 2);
+        alert(`Diện tích hình vuông là:  ${area} cm\u00B2 `);
+    }
+</script>
+</body>
+</html>
