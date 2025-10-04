@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tìm số đầu tiên chia hết cho 5</title>
+</head>
+<body>
+<script>
+    let a= 0, b = 1;
+    let sum = a + b;
+    while (sum % 5 !== 0) {
+        a = b;
+        b = sum;
+        sum = a + b;
+    }
+    document.write('số đầu tiên chia hết cho 5 là: ' + sum);
+</script>
+</body>
+</html>
