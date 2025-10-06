@@ -6,12 +6,19 @@
 </head>
 <body>
 <script>
-    let i, j;
-for (i = 1; i <= 7; i++) {
-    for (j = 1; j <= i; j++) {
-        document.write('*');
+    let chieuRong = 10;
+    let chieuCao = 5;
+    for (let i = 0; i < chieuCao; i++) {
+        let count = "";
+        for (let j = 0; j < chieuRong; j++) {
+            if (i === 0 || i === 4 || j === 0 || j === 9) {
+                count += "*&nbsp";
+            }else {
+                count += "&nbsp;&nbsp;&nbsp";
+            }
+        }
+        document.write(count + '<br>');
     }
-} document.write();
 </script>
 </body>
 </html>
