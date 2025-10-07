@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tìm số lớn nhất và giá trị trung bình</title>
+</head>
+<body>
+<script>
+    let numbers = [3, 5, 66, 11, 77, 88, 12, 9, 2, 10];
+    let maxValue = numbers[0];
+    let sum = 0;
+
+    for (let i = 0; i < numbers.length; i++) {
+        sum += numbers[i];
+        if (numbers[i] > maxValue) {
+            maxValue = numbers[i];
+        }
+    }
+    let ave = sum / numbers.length;
+
+    document.write('Giá trị lớn nhất là: ' + maxValue + '<br>');
+    document.write('Giá trị trung bình là: ' + ave);
+</script>
+</body>
+</html>

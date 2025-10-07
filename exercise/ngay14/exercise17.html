@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>xóa và gán giá trị vào cuối mảng</title>
+</head>
+<body>
+<script>
+    let numbers = [3, -5, 66, -11, 77, -88, -12, 9, 2, 10];
+    let input = parseInt(prompt('Nhập số cần kiểm tra'));
+    for (let i = 0; i < numbers.length; i++) {
+        if (input === numbers[i]) {
+            let j = i;
+            for (j; j < numbers.length - 1; j++) {
+                numbers[j] = numbers[j + 1];
+            }
+            numbers[j] = 0;
+        }
+    }
+    document.write(numbers);
+</script>
+</body>
+</html>

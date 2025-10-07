@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>đảo ngược phần tử trong mảng</title>
+</head>
+<body>
+<script>
+    let numbers = [3, -5, 66, -11, 77, -88, -12, 9, 2];
+    for (let i = 0; i < parseInt(numbers.length / 2); i++) {
+        let num = numbers[i];
+        numbers[i] = numbers[numbers.length - i - 1];
+        numbers[numbers.length - i - 1] = num;
+    }
+    document.write(numbers);
+</script>
+</body>
+</html>
