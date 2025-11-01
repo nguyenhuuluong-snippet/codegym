@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Date{
+            constructor(day, month, year){
+                this.day = day;
+                this.month = month;
+                this.year = year;
+            }
+            talk(myDate){
+                document.write(myDate);
+            }
+            displayDate(){
+                return `Ngay ${this.day}, Tháng ${this.month}, Năm: ${this.year} <br>`;
+            }
+        }
+        let myDate1 = new Date(2,2,2007);
+        document.write(`Trước: ${myDate1.displayDate()}`);
+        myDate1.day = 12;
+        document.write(`Sau: ${myDate1.displayDate()}`);
+    </script>
+</body>
+</html>

@@ -13,17 +13,26 @@
 
 <body>
 <script>
-    let numbers = [3, -5, 66, -11, 77, -88, -12, 9, 2];
-    for (let i = 0; i < numbers.length - 1; i++) {
-        for (let j = i + 1; j < numbers.length; j++) {
-            if (numbers[i] < numbers[j]) {
-                let num = numbers[i];
-                numbers[i] = numbers[j];
-                numbers[j] = num;
-            }
+    // person
+    // Thuộc tính: tên, ngày sinh, sđt
+    // hành vi: nói
+    class Person{
+        constructor(name, dob, phone){
+            this.name = name;
+            this.dob = dob;
+            this.phone = phone;
+        }
+        talk(mess){
+            document.write(mess);
+        }
+        displayInformation(){
+            return `doi tuong co ten: ${this.name}, ngay sinh: ${this.dob}, so dien thoai: ${this.phone} <br>`;
         }
     }
-    document.write(numbers);
+    let person1 = new Person("Lương","18-08-1999","0333999000");
+    document.write(`Ban dau: ${person1.displayInformation()}`);
+    person1.name = "Long";
+    document.write(`sau khi thay doi: ${person1.displayInformation()}`);
 </script>
 </body>
 
